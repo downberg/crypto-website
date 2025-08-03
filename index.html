@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoHub – Startseite</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav>
+      <div class="logo">CryptoHub</div>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="markets.html">Märkte</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <h1>Entdecke die Welt der Kryptowährungen</h1>
+      <p>
+        Live‑Kursdiagramme und aktuelle Finanznachrichten – alles an einem Ort.
+      </p>
+      <a href="markets.html" class="button">Zu den Charts</a>
+      <a href="news.html" class="button">Neuigkeiten</a>
+    </section>
+
+    <!-- Ticker section -->
+    <section class="section">
+      <h2>Kryptowährungs‑Ticker</h2>
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+          <a
+            href="https://www.tradingview.com"
+            rel="noopener"
+            target="_blank"
+            ><span class="blue-text">Ticker Tape</span></a
+          >
+          von TradingView
+        </div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+          async
+        >
+          {
+            "symbols": [
+              { "description": "Bitcoin", "proName": "COINBASE:BTCUSD" },
+              { "description": "Ethereum", "proName": "COINBASE:ETHUSD" },
+              { "description": "Binance Coin", "proName": "BINANCE:BNBUSD" },
+              { "description": "Cardano", "proName": "BINANCE:ADAUSD" },
+              { "description": "Solana", "proName": "BINANCE:SOLUSD" },
+              { "description": "XRP", "proName": "BINANCE:XRPUSD" }
+            ],
+            "colorTheme": "dark",
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "locale": "de"
+          }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 CryptoHub – Alle Rechte vorbehalten.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoHub – Märkte</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav>
+      <div class="logo">CryptoHub</div>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="markets.html">Märkte</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <section class="section">
+      <h1>Live‑Charts</h1>
+      <p>
+        Interaktives Kurs‑Chart für verschiedene Kryptowährungen. Über das Feld im
+        Chart können Sie das gewünschte Symbol auswählen (z.&nbsp;B. BTCUSD,
+        ETHUSD, BNBUSD). Alle Daten werden in Echtzeit von TradingView
+        bereitgestellt.
+      </p>
+      <!-- TradingView Advanced Chart BEGIN -->
+      <div id="tradingview_advanced_chart"></div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/tv.js"
+      ></script>
+      <script type="text/javascript">
+        /*
+         * The TradingView Advanced Chart widget allows users to switch between
+         * different symbols directly within the widget using the built‑in
+         * symbol search. Setting allow_symbol_change to true provides a drop
+         * down and search box similar to professional trading platforms.
+         */
+        new TradingView.widget({
+          container_id: "tradingview_advanced_chart",
+          width: "100%",
+          height: 600,
+          symbol: "COINBASE:BTCUSD",
+          interval: "D",
+          timezone: "Europe/Berlin",
+          theme: "dark",
+          style: "1",
+          locale: "de",
+          toolbar_bg: "#12161c",
+          enable_publishing: false,
+          allow_symbol_change: true,
+          hide_top_toolbar: false,
+          save_image: false,
+          // Display a button to open the chart in a new, larger pop‑up window.
+          show_popup_button: true,
+          popup_width: "1000",
+          popup_height: "650"
+        });
+      </script>
+      <!-- TradingView Advanced Chart END -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 CryptoHub – Alle Rechte vorbehalten.
+    </footer>
+  </body>
+</html>
